@@ -1,0 +1,65 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+struct DataPenduduk {
+    string nik, nama, tempatTglLahir, jenisKelamin, golonganDarah, alamat;
+    string rt, rw, kelurahanDesa, kecamatan, agama, statusPerkawinan, pekerjaan;
+    string kewarganegaraan, berlakuHingga = "SEUMUR HIDUP", provinsi, kabupaten;};
+int main(){
+    DataPenduduk data;
+    cout << "Masukkan NIK Anda: ";
+    cin >> data.nik;
+    cin.ignore();
+    cout << "Provinsi: ";
+    getline(cin, data.provinsi);
+    cout << "Kabupaten/Kecamatan: ";
+    getline(cin, data.kabupaten);
+    cout << "Masukkan Nama Anda: ";
+    getline(cin, data.nama);
+    cout << "Masukkan Tempat/Tgl Lahir Anda: ";
+    getline(cin, data.tempatTglLahir);
+    cout << "Jenis Kelamin: ";
+    getline(cin, data.jenisKelamin);
+    cout << "Masukkan Golongan Darah Anda: ";
+    getline(cin, data.golonganDarah);
+    cout << "Masukkan Alamat Anda: ";
+    getline(cin, data.alamat);
+    cout << "Masukkan RT Anda: ";
+    cin >> data.rt;
+    cin.ignore();
+    cout << "Masukkan RW Anda: ";
+    cin >> data.rw;
+    cin.ignore();
+    cout << "Masukkan Kelurahan/Desa Anda: ";
+    getline(cin, data.kelurahanDesa);
+    cout << "Masukkan Kecamatan Anda: ";
+    getline(cin, data.kecamatan);
+    cout << "Agama: ";
+    getline(cin, data.agama);
+    cout << "Status Perkawinan: ";
+    getline(cin, data.statusPerkawinan);
+    cout << "Masukkan Pekerjaan Anda: ";
+    getline(cin, data.pekerjaan);
+    cout << "Kewarganegaraan: ";
+    getline(cin, data.kewarganegaraan);
+    cout << "\n===============================================================\n";
+    cout << setw(50) << "PROVINSI " << data.provinsi << endl;
+    cout << setw(50) << "KABUPATEN " << data.kabupaten << endl;
+    cout << "===============================================================\n";
+    cout << left;
+    cout << setw(20) << "NIK" << ": " << data.nik << endl;
+    cout << setw(20) << "Nama" << ": " << data.nama << endl;
+    cout << setw(20) << "Tempat/Tgl Lahir" << ": " << data.tempatTglLahir << endl;
+    cout << setw(20) << "Jenis Kelamin" << ": " << left << setw(25) << data.jenisKelamin << "Gol. Darah" << ": " << data.golonganDarah << endl;
+    cout << setw(20) << "Alamat" << ": " << data.alamat << endl;
+    cout << setw(20) << "      RT/RW" << ": " << data.rt << "/" << data.rw << endl;
+    cout << setw(20) << "      Kel/Desa" << ": " << data.kelurahanDesa << endl;
+    cout << setw(20) << "      Kecamatan" << ": " << data.kecamatan << endl;
+    cout << setw(20) << "Agama" << ": " << data.agama << endl;
+    cout << setw(20) << "Status Perkawinan" << ": " << data.statusPerkawinan << endl;
+    cout << setw(20) << "Pekerjaan" << ": " << data.pekerjaan << endl;
+    cout << setw(20) << "Kewarganegaraan" << ": " << data.kewarganegaraan << endl;
+    cout << setw(20) << "Berlaku Hingga" << ": " << data.berlakuHingga << endl;
+    cout << "===============================================================\n";
+    return 0;
+	}
